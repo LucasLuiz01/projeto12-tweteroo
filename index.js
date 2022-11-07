@@ -23,21 +23,11 @@ app.post("/tweets", (req, res) => {
     return;
   }
   tweets.push(req.body);
-  res.status(201).send(tweets);
+  res.status(201).send("OK");
   return;
 });
 
 app.get("/tweets", (req, res) => {
-//   tweets = [
-//     { username: "bobesponja", tweet: "eu amo o hub" },
-//     { username: "bobesponja", tweet: "eu am o hub" },
-//     { username: "bobesponja", tweet: "eum o hub" },
-//   ];
-//   usuarios = {
-//     bobesponja:
-//       "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info",
-//   };
-
   const lastTweets = tweets.slice(-10);
 
   let ret = [];
